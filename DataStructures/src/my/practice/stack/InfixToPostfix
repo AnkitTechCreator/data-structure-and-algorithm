@@ -1,0 +1,10 @@
+Infix to Postfix Conversion:
+
+Here is the outline of the algorithm.
+
+Scan the tokens from left to right.
+If you encounter a number token, move it immediately to the result queue.
+If you encounter an operator and the operator stack is empty, push the operator on the stack.
+If you encounter an operator whose precedence is greater than that of the operator at the top of the stack, push the new operator on the stack.
+If you encounter an operator whose precedence is less than or equal to the precedence of the operator at the top of the stack, pop the stack and move the operator from the stack to the output queue. Repeat this step until either the stack empties or an operator appears at the top of the stack whose precedence is smaller than the precedence of the current operator. Push the new operator on the stack.
+When you reach the end of the input, move any remaining operators from the stack to the result queue.
